@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ff4c525d" tools:context=".MainActivity"
+    android:id="@+id/mainLayout">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <Button
+            android:id="@+id/paintbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Paint"/>
+        <Button
+            android:id="@+id/optionbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:id="@+id/optionView"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thickness"
+            android:textSize="30dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"/>
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/thickBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color"
+            android:textSize="30dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/whitebtn"
+                    android:background="#fffbf8ff" />
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/blackbtn"
+                    android:background="#ff000000" />
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/bluebtn"
+                    android:background="#ff0900c6"
+                    />
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/greenbtn"
+                    android:background="#ff20b860"
+                    />
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/redbtn"
+                    android:background="#ffff002a"
+                    />
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/yellowbtn"
+                    android:background="#fffffc40"
+                    />
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/orangebtn"
+                    android:background="#ffff8f2b"
+                    />
+                <Button
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_weight="1"/>
+            </TableRow>
+
+            </TableLayout>
+
+    </LinearLayout>
+    <com.example.administrator.painter.PaintView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/paintView" />
+
+
+
+</LinearLayout>
